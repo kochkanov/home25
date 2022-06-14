@@ -1,0 +1,11 @@
+.card {
+    margin: 1rem auto;
+    border-radius: 6px;
+    /* background-color: rgb(243, 235, 235); */
+    background: rgb(108, 106, 163);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,154,140,0.6895133053221288) 30%, rgba(131,144,148,1) 33%, rgba(160,247,243,0.1) 100%);
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
