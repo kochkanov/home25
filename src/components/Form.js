@@ -75,6 +75,7 @@ console.log(store);
           <input
             type="text"
             id="email"
+            placeholder="example@gmail.com"
             onChange={emailChangeHandler}
             value={emailValid}
           />
@@ -85,6 +86,7 @@ console.log(store);
           <input
             type="password"
             id="password"
+            placeholder="1234567"
             onChange={passwordChangeHandler}
             value={passwordValid}
           />
