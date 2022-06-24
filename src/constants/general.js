@@ -1,0 +1,1 @@
+export const USER_DATA_BASE = "https://auth-admin-a2743-default-rtdb.firebaseio.com/"

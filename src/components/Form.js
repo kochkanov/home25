@@ -9,24 +9,27 @@ import { uiFormActions } from "./../store/reducers/authSlice";
 
 export const Form = (props) => {
   const store = useSelector((state) => state.user);
+console.log(store);
+
+
 
   const dispatch = useDispatch();
   const [emailValid, setEmailValid] = useState("");
   const [eValid, setEValid] = useState(false);
   const [passValid, setPassValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState("");
- let[st, setst]=useState(false)
- let[st2, setst2]=useState(false)
+  let [st, setst] = useState(false);
+  let [st2, setst2] = useState(false);
   const emailChangeHandler = (e) => {
     let emailValue = e.target.value;
 
     setEmailValid(emailValue);
     if (emailValue.includes("@")) {
       setEValid(true);
-      setst(false)
+      setst(false);
     } else {
       setEValid(false);
-      setst(true)
+      setst(true);
     }
   };
   let a = !eValid && st;
@@ -35,10 +38,10 @@ export const Form = (props) => {
     setPasswordValid(passValue);
     if (passValue.length > 6) {
       setPassValid(true);
-      setst2(false)
+      setst2(false);
     } else {
       setPassValid(false);
-      setst2(true)
+      setst2(true);
     }
   };
   let p = !passValid && st2;
@@ -48,7 +51,7 @@ export const Form = (props) => {
   }
   const formSubmit = (e) => {
     e.preventDefault();
-    props.onShow()
+    props.onShow();
     dispatch(
       uiFormActions.emailHandler({
         email: emailValid,
@@ -57,12 +60,10 @@ export const Form = (props) => {
     );
   };
 
- 
-console.log(a);
   let emailClasses = a
     ? `${classes.control} ${classes.invalid}`
     : `${classes.control} `;
-  
+
   let passwordClasses = p
     ? `${classes.control} ${classes.invalid}`
     : `${classes.control}`;
@@ -90,7 +91,7 @@ console.log(a);
         </div>
         <div className={classes.button}>
           <Button disabled={formIsValid} type="submit">
-            Sign up
+            post request
           </Button>
         </div>
       </form>
